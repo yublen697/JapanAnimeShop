@@ -1,8 +1,8 @@
 package com.example.anameshop.controller;
 
-
 import com.example.anameshop.model.entity.User;
 import com.example.anameshop.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -59,7 +59,6 @@ public class UserController {
 	}
 	*/
 
-    // 新增 member
     @PostMapping("/user_backend/")
     public String createUser(@ModelAttribute User user, Model model) throws Exception {
 
@@ -78,7 +77,7 @@ public class UserController {
     // 修改 user
     @PutMapping("/user_backend/{userId}")
     @ResponseBody
-    public String upddateUser(@ModelAttribute User user,
+    public String updateUser(@ModelAttribute User user,
                                 @PathVariable("userId") Integer userId,
                                 Model model) throws InterruptedException {
         // 修改會員資料
