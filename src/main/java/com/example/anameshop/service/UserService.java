@@ -120,19 +120,14 @@ public class UserService {
 
 	/*
 	// 原本的登入
-	public Member login(String account, String password) throws Exception {
 		// 從資料庫中根據帳號查詢相應的會員
-		Member member = memberDao.findMemberByAccount(account);
 
 		// 如果沒有找到會員，印出訊息並拋出例外
-		if (member == null) {
 		    System.out.println("查無此帳號");
 		    //throw new Exception("Account not found");
 		    return null;
 		}
 		// 從資料庫中獲取會員的密碼雜湊值和鹽值
-		String hash = member.getPassword();
-		String salt = member.getSalt();
 
 		// 獲取前端輸入的密碼
 		String frontPassword = password;
@@ -158,8 +153,6 @@ public class UserService {
 		System.out.println(inputHashedHexString);
 		System.out.println(inputHashedHexString.equals(hash));
 
-		// 調用 memberDao 的 login 方法，傳遞帳號和生成的雜湊十六進位字串，進行登入操作並返回結果
-		return memberDao.login(account, inputHashedHexString);
 	}
 	*/
 

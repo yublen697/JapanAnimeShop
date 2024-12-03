@@ -35,7 +35,6 @@ public class LoginController {
         }
 
         if (user != null) {
-            // member 是傳給前端的資料
             Map<String, Object> result = new HashMap<>();
             result.put("user", user);
             result.put("isUser", user.getIsUser());

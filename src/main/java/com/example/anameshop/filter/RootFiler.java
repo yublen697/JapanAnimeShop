@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter({"/menu_backend", "/order_backend", "/User_backend"})
 public class RootFiler extends HttpFilter {
     /**
      *
