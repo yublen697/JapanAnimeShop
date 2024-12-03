@@ -58,8 +58,8 @@ public class ForgetController {
         // 發送驗證碼郵件
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(email);
-        message.setFrom("Catbrunch");
-        message.setSubject("Catbrunch 驗證碼");
+        message.setFrom("AnimeShop");
+        message.setSubject("AnimeShop 驗證碼");
 
         member.getName();
 
@@ -69,7 +69,7 @@ public class ForgetController {
                 "驗證碼應於5分鐘內（" + expiryDateStr + "前）完成輸入，逾時請重新申請。\n\n" +
                 "如非本人操作，請忽略此郵件。\n\n" +
                 "祝您使用愉快！\n\n" +
-                "Catbrunch 團隊，喵喵喵。\n\n";
+                "MyGo 團隊。\n\n";
         message.setText(emailContent);
         mailSender.send(message);
 
