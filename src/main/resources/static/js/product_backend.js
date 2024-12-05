@@ -115,7 +115,7 @@ $(document).ready(function () {
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
-                    title: `${mealName}刪除成功!`,
+                    title: `${productName}刪除成功!`,
                     icon: "success",
                     iconColor: '#4CAF50',
                     timer: 1300,
