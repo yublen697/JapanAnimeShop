@@ -41,11 +41,11 @@ public class PathController {
         return "location";
     }
 
-    // 跳轉 /member 頁面
-    @GetMapping("/member")
-    public String memberPage() {
+    // 跳轉 /user 頁面
+    @GetMapping("/user")
+    public String userPage() {
 
-        return "member";
+        return "user";
     }
 
 

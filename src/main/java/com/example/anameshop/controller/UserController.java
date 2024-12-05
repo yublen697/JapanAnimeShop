@@ -19,9 +19,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // 將資料傳到 member_backend
+    // 將資料傳到 user_backend
     @GetMapping("/user_backend")
-    public String getAllMember(Model model) {
+    public String getAllUser(Model model) {
         List<User> userList = userService.getAllUser();
         model.addAttribute("userList", userList);
         return "user_backend";
