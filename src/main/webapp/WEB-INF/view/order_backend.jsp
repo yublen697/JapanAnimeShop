@@ -96,11 +96,11 @@
         </div>
     </header>
 
-    <!-- section1 區域 訂餐資料 -->
+    <!-- section1 區域 訂單資料 -->
     <section id="sec1">
         <div class="container-xl">
             <div class="row">
-                <h2 class="mb-4">訂餐內容</h2>
+                <h2 class="mb-4">訂單內容</h2>
                 <div class="form-group me-auto mb-3">
                     <input type="text" id="searchInput" class="form-control" placeholder="搜尋...">
                 </div>
@@ -108,13 +108,13 @@
                     <table id="orderTable" class="table table-striped table-bordered text-center table-hover">
                         <thead>
                             <tr>
-                                <th>訂餐號碼 <img src="/img/icons/down.svg" alt=""></th>
+                                <th>訂單號碼 <img src="/img/icons/down.svg" alt=""></th>
                                 <!--
                              	<th>商品內容 <img src="/img/icons/down.svg" alt=""></th>
                                 <th>數量 <img src="/img/icons/down.svg" alt=""></th>
                                 <th>金額 <img src="/img/icons/down.svg" alt=""></th>
                                 -->
-                                <th>訂餐時間 <img src="/img/icons/down.svg" alt=""></th>
+                                <th>訂單時間 <img src="/img/icons/down.svg" alt=""></th>
                                 <th>總金額 <img src="/img/icons/down.svg" alt=""></th>
                                 <th>操作</th>
                             </tr>

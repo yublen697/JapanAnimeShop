@@ -66,7 +66,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-md-0 ps-2 ps-md-0">
               <li class="nav-item">
                 <a class="nav-link active" id="nav-link" href="/product_backend">
-                  <img class="me-2" src="/img/paw-print.png" alt="">菜單</a>
+                  <img class="me-2" src="/img/paw-print.png" alt="">商品</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="nav-link" href="/news_backend">
@@ -94,31 +94,30 @@
   </div>
 </header>
 
-<!-- section1 區域 新增菜單 -->
+<!-- section1 區域 新增商品 -->
 <section id="sec1">
   <div class="container-ml my-3">
     <div class="col-12 col-md-6 mx-auto px-3">
       <form id="addProductForm" action="${ pageContext.request.contextPath }/product_backend/${ product.productId }" method="post" enctype="multipart/form-data">
         <fieldset>
-          <h2 class="text-center mb-2">${ _method eq 'PUT' ? '修改菜單' : '新增菜單' }</h2>
+          <h2 class="text-center mb-2">${ _method eq 'PUT' ? '修改商品' : '新增商品' }</h2>
           <!-- HttpMethod 隱藏欄位 -->
           <input name="_method" type="hidden" value="${ _method }" />
           <div class="form-group">
             <label for="productType">選擇分類：</label>
             <select id="productType" name="productType" class="form-control" required>
-              <option value="appetizer">前 菜</option>
-              <option value="soup">湯 品</option>
-              <option value="mainCourse">主 餐</option>
-              <option value="dessert">甜 點</option>
-              <option value="drinks">飲 料</option>
+              <option value="book">漫畫輕小說</option>
+              <option value="animemodel">模型</option>
+              <option value="animeperiph">周邊</option>
+              <option value="game">遊戲</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="productName">餐點名稱：</label>
+            <label for="productName">商品名稱：</label>
             <input id="productName" name="productName" class="form-control" value="${ product.productName }" required>
           </div>
           <div class="form-group">
-            <label for="description">餐點介紹：</label>
+            <label for="description">商品介紹：</label>
             <textarea id="description" name="description" rows="3" class="form-control" required>${ product.description }</textarea>
           </div>
           <div class="form-group">
@@ -133,7 +132,7 @@
             </div>
           </div>
           <button type="submit" class="btn mt-3" data-action="${ _method eq 'PUT' ? 'update' : 'create' }">
-            ${ _method eq 'PUT' ? '修改菜單' : '新增菜單' }
+            ${ _method eq 'PUT' ? '修改商品' : '新增商品' }
           </button>
         </fieldset>
       </form>
@@ -147,38 +146,35 @@
 <section id="sec2">
   <div class="container-xl my-3">
     <div class="row">
-      <!-- 餐點總類區 -->
+      <!-- 商品總類區 -->
       <div class="col-12 col-md-3">
         <div class="card product-card my-3">
           <div class="card-body">
-            <h2 class="card-title text-center"><img src="/img/icons/product.png" alt=""> 餐點種類</h2>
+            <h2 class="card-title text-center"><img src="/img/icons/product.png" alt=""> 商品種類</h2>
             <div class="list-group">
-              <a id="appetizer" type="button" href="/product_backend/productType/appetizer#sec2" class="list-group-item list-group-item-warning ${ active eq 'appetizer' ? 'active' : '' }" data-category="appetizer">
-                <img src="/img/icons/appetizer.png" alt=""> 前 菜
+              <a id="book" type="button" href="/product_backend/productType/book#sec2" class="list-group-item list-group-item-warning ${ active eq 'book' ? 'active' : '' }" data-category="book">
+                <img src="/img/icons/book.png" alt=""> 漫畫輕小說
               </a>
-              <a id="soup" type="button" href="/product_backend/productType/soup#sec2" class="list-group-item list-group-item-warning ${ active eq 'soup' ? 'active' : '' }" data-category="soup">
-                <img src="/img/icons/soup.png" alt=""> 湯 品
+              <a id="animemodel" type="button" href="/product_backend/productType/animemodel#sec2" class="list-group-item list-group-item-warning ${ active eq 'animemodel' ? 'active' : '' }" data-category="animemodel">
+                <img src="/img/icons/animemodel.png" alt=""> 模型
               </a>
-              <a id="mainCourse" type="button" href="/product_backend/productType/mainCourse#sec2" class="list-group-item list-group-item-warning ${ active eq 'mainCourse' ? 'active' : '' }" data-category="mainCourse">
-                <img src="/img/icons/mainCourse.png" alt=""> 主 餐
+              <a id="animeperiph" type="button" href="/product_backend/productType/animeperiph#sec2" class="list-group-item list-group-item-warning ${ active eq 'animeperiph' ? 'active' : '' }" data-category="animeperiph">
+                <img src="/img/icons/animeperiph.png" alt=""> 周邊
               </a>
-              <a id="dessert" type="button" href="/product_backend/productType/dessert#sec2" class="list-group-item list-group-item-warning ${ active eq 'dessert' ? 'active' : '' }" data-category="dessert">
-                <img src="/img/icons/dessert.png" alt=""> 甜 點
-              </a>
-              <a id="drinks" type="button" href="/product_backend/productType/drinks#sec2" class="list-group-item list-group-item-warning ${ active eq 'drinks' ? 'active' : '' }" data-category="drinks">
-                <img src="/img/icons/drinks.png" alt=""> 飲 料
+              <a id="game" type="button" href="/product_backend/productType/game#sec2" class="list-group-item list-group-item-warning ${ active eq 'game' ? 'active' : '' }" data-category="game">
+                <img src="/img/icons/game.png" alt=""> 遊戲
               </a>
             </div>
           </div>
         </div>
       </div>
-      <!-- 餐點內容區 -->
+      <!-- 商品內容區 -->
       <div class="col-12 col-md-9">
-        <!-- 餐點內容顯示 -->
+        <!-- 商品內容顯示 -->
         <div id="productType" class="content">
 
           <div id="list-wrapper">
-            <div class="appetizer row">
+            <div class="book row">
               <!-- 回圈開始 -->
               <c:forEach items="${ productList }" var="product">
 

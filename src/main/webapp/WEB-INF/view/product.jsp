@@ -120,25 +120,21 @@
             <h2 class="card-title text-center"><img src="/img/icons/product.png" alt=""> 商品種類</h2>
             <div class="list-group">
 
-              <a id="appetizer" type="button" href="/product/productType/appetizer#sec2"
-                 class="list-group-item list-group-item-warning ${ active eq 'appetizer' ? 'active' : '' }" data-category="appetizer">
-                <img src="/img/icons/appetizer.png" alt=""> 前 菜
+              <a id="book" type="button" href="/product/productType/book#sec2"
+                 class="list-group-item list-group-item-warning ${ active eq 'book' ? 'active' : '' }" data-category="book">
+                <img src="/img/icons/book.png" alt=""> 漫畫輕小說
               </a>
-              <a id="soup" type="button" href="/product/productType/soup#sec2"
-                 class="list-group-item list-group-item-warning ${ active eq 'soup' ? 'active' : '' }" data-category="soup">
-                <img src="/img/icons/soup.png" alt=""> 湯 品
+              <a id="soup" type="button" href="/product/productType/animemodel#sec2"
+                 class="list-group-item list-group-item-warning ${ active eq 'animemodel' ? 'active' : '' }" data-category="animemodel">
+                <img src="/img/icons/animemodel.png" alt=""> 模型
               </a>
-              <a id="mainCourse" type="button" href="/product/productType/mainCourse#sec2"
-                 class="list-group-item list-group-item-warning ${ active eq 'mainCourse' ? 'active' : '' }" data-category="mainCourse">
-                <img src="/img/icons/mainCourse.png" alt=""> 主 餐
+              <a id="animeperiph" type="button" href="/product/productType/animeperiph#sec2"
+                 class="list-group-item list-group-item-warning ${ active eq '' ? 'active' : '' }" data-category="animeperiph">
+                <img src="/img/icons/animeperiph.png" alt=""> 周邊
               </a>
-              <a id="dessert" type="button" href="/product/productType/dessert#sec2"
-                 class="list-group-item list-group-item-warning ${ active eq 'dessert' ? 'active' : '' }" data-category="dessert">
-                <img src="/img/icons/dessert.png" alt=""> 甜 點
-              </a>
-              <a id="drinks" type="button" href="/product/productType/drinks#sec2"
-                 class="list-group-item list-group-item-warning ${ active eq 'drinks' ? 'active' : '' }" data-category="drinks">
-                <img src="/img/icons/drinks.png" alt=""> 飲 料
+              <a id="game" type="button" href="/product/productType/dessert#sec2"
+                 class="list-group-item list-group-item-warning ${ active eq 'game' ? 'active' : '' }" data-category="game">
+                <img src="/img/icons/game.png" alt=""> 遊戲
               </a>
 
             </div>
@@ -178,7 +174,7 @@
           </div>
 
         </div>
-        <!-- 餐點內容顯示結束 -->
+        <!-- 商品內容顯示結束 -->
 
         <!-- 分頁 pagination-container -->
         <div class="container-xl pagination my-3">
@@ -206,7 +202,7 @@
         <a href="/index">Home</a>
       </div>
       <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title active">菜單</h3>
+        <h3 class="title active">商品</h3>
         <a href="/product" class="active">Product</a>
       </div>
       <div class="col-6 col-md-2 pt-1 d-flex flex-column">
@@ -214,7 +210,7 @@
         <a href="/news">News</a>
       </div>
       <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title">訂餐</h3>
+        <h3 class="title">訂單</h3>
         <a href="/order">Order</a>
       </div>
       <div class="col-6 col-md-2 pt-1 d-flex flex-column">

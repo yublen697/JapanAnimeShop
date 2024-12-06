@@ -119,25 +119,21 @@
             <h1 class="mb-4">商品訂購</h1>
             <div class="product-type d-flex justify-content-between mb-3">
 
-                <a id="appetizer" type="button" href="/order/productType/appetizer#sec2" data-offset="120"
-                   class="list-group-item list-group-item-warning ${ active eq 'appetizer' ? 'active' : '' }" data-category="appetizer">
-                    <img src="/img/icons/appetizer.png" alt=""> 前 菜
+                <a id="book" type="button" href="/order/productType/book#sec2" data-offset="120"
+                   class="list-group-item list-group-item-warning ${ active eq 'book' ? 'active' : '' }" data-category="book">
+                    <img src="/img/icons/book.png" alt=""> 漫畫輕小說
                 </a>
-                <a id="soup" type="button" href="/order/productType/soup#sec2"
-                   class="list-group-item list-group-item-warning ${ active eq 'soup' ? 'active' : '' }" data-category="soup">
-                    <img src="/img/icons/soup.png" alt=""> 湯 品
+                <a id="animemodel" type="button" href="/order/productType/animemodel#sec2"
+                   class="list-group-item list-group-item-warning ${ active eq 'animemodel' ? 'active' : '' }" data-category="animemodel">
+                    <img src="/img/icons/animemodel.png" alt=""> 模型
                 </a>
-                <a id="mainCourse" type="button" href="/order/productType/mainCourse#sec2"
-                   class="list-group-item list-group-item-warning ${ active eq 'mainCourse' ? 'active' : '' }" data-category="mainCourse">
-                    <img src="/img/icons/mainCourse.png" alt=""> 主 餐
+                <a id="animeperiph" type="button" href="/order/productType/animeperiph#sec2"
+                   class="list-group-item list-group-item-warning ${ active eq 'animeperiph' ? 'active' : '' }" data-category="animeperiph">
+                    <img src="/img/icons/animeperiph.png" alt=""> 周邊
                 </a>
-                <a id="dessert" type="button" href="/order/productType/dessert#sec2"
-                   class="list-group-item list-group-item-warning ${ active eq 'dessert' ? 'active' : '' }" data-category="dessert">
-                    <img src="/img/icons/dessert.png" alt=""> 甜 點
-                </a>
-                <a id="drinks" type="button" href="/order/productType/drinks#sec2"
-                   class="list-group-item list-group-item-warning ${ active eq 'drinks' ? 'active' : '' }" data-category="drinks">
-                    <img src="/img/icons/drinks.png" alt=""> 飲 料
+                <a id="game" type="button" href="/order/productType/game#sec2"
+                   class="list-group-item list-group-item-warning ${ active eq 'game' ? 'active' : '' }" data-category="game">
+                    <img src="/img/icons/game.png" alt=""> 遊戲
                 </a>
 
             </div>
@@ -215,15 +211,15 @@
                 <a href="/index">Home</a>
             </div>
             <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title">菜單</h3>
-                <a href="/product">商品</a>
+                <h3 class="title">商品</h3>
+                <a href="/product">Product</a>
             </div>
             <div class="col-6 col-md-2 pt-1 d-flex flex-column">
                 <h3 class="title">活動</h3>
                 <a href="/news">News</a>
             </div>
             <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title active">訂餐</h3>
+                <h3 class="title active">訂單</h3>
                 <a href="/order" class="active">Order</a>
             </div>
             <div class="col-6 col-md-2 pt-1 d-flex flex-column">
@@ -232,7 +228,7 @@
             </div>
             <div class="col-6 col-md-2 pt-1 d-flex flex-column">
                 <h3 class="title">會員</h3>
-                <a href="/user">Member</a>
+                <a href="/user">User</a>
             </div>
             <div class="col-12 d-flex align-items-center">
                 <img src="/img/Logo/Logo.gif" class="img-fluid me-3" alt="...">

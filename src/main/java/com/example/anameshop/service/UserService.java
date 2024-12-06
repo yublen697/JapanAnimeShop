@@ -30,11 +30,11 @@ public class UserService {
     }
 
     // 新增 user
-    public int createUser(User member) throws Exception {
+    public int createUser(User user) throws Exception {
 
-        if(member != null) {
+        if(user != null) {
             // 1.將 password 利用 SHA-256 雜湊加鹽
-            String password = member.getPassword();
+            String password = user.getPassword();
             // 隨機生成一個鹽(Salt)
             byte[] salt = new byte[16];
             SecureRandom secureRandom = new SecureRandom();
@@ -58,20 +58,20 @@ public class UserService {
 
             // 4.存入 DB
             // 設定雜湊後的密碼及鹽巴
-            member.setPassword(hashedHexString);
-            member.setSalt(KeyUtil.bytesToHex(salt));
+            user.setPassword(hashedHexString);
+            user.setSalt(KeyUtil.bytesToHex(salt));
         } else {
             System.out.println("帳號不存在");
         }
 
-        return userDao.createUser(member);
+        return userDao.createUser(user);
     }
 
 
     // 修改 user
-    public int updateUser(Integer memberId, User user) {
+    public int updateUser(Integer userId, User user) {
 
-        return userDao.updateUser(memberId, user);
+        return userDao.updateUser(userId, user);
     }
 
     // 刪除 user
