@@ -19,7 +19,7 @@ import java.util.TimerTask;
 @Service
 public class ForgetService {
     @Autowired
-    private UserDao memberDao;
+    private UserDao userDao;
 
     private Map<String, String> verificationCodes = new HashMap<>();
 
@@ -52,13 +52,13 @@ public class ForgetService {
 
     // 修改密碼
     public boolean resetPassword(String email, String newPassword) {
-        User user = memberDao.findUserByEmail(email);
+        User user = userDao.findUserByEmail(email);
         if (user != null) {
             // 重新生成鹽值
             byte[] newSalt = generateSalt();
             // 更新密碼及鹽值
             updatePasswordAndSalt(user, newPassword, newSalt);
-            memberDao.update(user);
+            userDao.update(user);
 
 
             verificationCodes.remove(email);
