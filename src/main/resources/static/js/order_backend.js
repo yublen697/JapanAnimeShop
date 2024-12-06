@@ -117,7 +117,7 @@ $(document).ready(function () {
             if (result.isConfirmed) {
                 // 確認刪除，提交表單
                 Swal.fire({
-                    title: `${orderId}號餐點刪除成功!`,
+                    title: `${orderId}商品刪除成功!`,
                     icon: "success",
                     iconColor: '#4CAF50',
                     showConfirmButton: false
