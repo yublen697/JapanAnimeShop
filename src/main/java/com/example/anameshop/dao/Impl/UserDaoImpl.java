@@ -115,7 +115,7 @@ public class UserDaoImpl implements UserDao {
     // 驗證 Emai
     @Override
     public boolean checkEmail(String email) {
-        String sql = "SELECT COUNT(*) FROM member WHERE email = ?";
+        String sql = "SELECT COUNT(*) FROM user WHERE email = ?";
         try {
             Integer count = jdbcTemplate.queryForObject(sql, Integer.class, email);
             return count != null && count > 0;
@@ -131,7 +131,7 @@ public class UserDaoImpl implements UserDao {
     // 驗證 Phone
     @Override
     public boolean checkPhone(String phone) {
-        String sql = "SELECT COUNT(*) FROM member WHERE phone = ?";
+        String sql = "SELECT COUNT(*) FROM user WHERE phone = ?";
         try {
             Integer count = jdbcTemplate.queryForObject(sql, Integer.class, phone);
             return count != null && count > 0;

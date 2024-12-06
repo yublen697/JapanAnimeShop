@@ -26,7 +26,7 @@ public class ProductDaoImpl implements ProductDao {
     // 根據 ID 單筆查詢，查不到會有 DataAccess 例外
     @Override
     public Product findProductById(Integer productId) {
-        String sql = "SELECT product_id, meal_name, product_type, description, product_price, product_image FROM product WHERE product_id = ?";
+        String sql = "SELECT product_id, product_name, product_type, description, product_price, product_image FROM product WHERE product_id = ?";
 
         try {
             return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Product.class),productId);

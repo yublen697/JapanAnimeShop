@@ -30,13 +30,14 @@ public class ProductService{
     }
 
     // 修改 product
-    public int updateProduct(Integer menuId, Product product) {
-        return productDao.updateProduct(menuId, product);
+    public int updateProduct(Integer productId, Product product) {
+        return productDao.updateProduct(productId, product);
     }
 
     // 刪除 product
     public int deleteProduct(Integer productId) {
         return productDao.deleteProduct(productId);
+
     }
 
 }
