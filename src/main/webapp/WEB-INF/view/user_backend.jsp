@@ -77,7 +77,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="nav-link" href="/order_backend">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">訂餐</a>
+                                    <img class="me-2" src="/img/paw-print.png" alt="">訂單</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" id="nav-link" href="/user_backend">
@@ -164,17 +164,6 @@
             </div>
         </div>
     </section>
-
-
-	<!-- 圖表區 -->
-	<section id="sec2">
-        <div class="container-xl">
-            <div class="row">
-				<%@ include file="user_charts.jspf" %>
-            </div>
-        </div>
-    </section>
-
 
     <!-- 修改表單 -->
     <div class="modal fade" id="updateForm" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -283,7 +272,7 @@
                     <a href="/news">News</a>
                 </div>
                 <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                    <h3 class="title">訂餐</h3>
+                    <h3 class="title">訂單</h3>
                     <a href="/order">Order</a>
                 </div>
                 <div class="col-6 col-md-2 pt-1 d-flex flex-column">
