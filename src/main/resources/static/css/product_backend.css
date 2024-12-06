@@ -117,7 +117,7 @@ form {
     width: 100%;
 }
 
-.meal-card img {
+.product-card img {
     width: 300px;
     height: 100%;
     min-width: 160px;
@@ -125,7 +125,7 @@ form {
     max-height: 300px !important;
 }
 
-.meal-card img {
+.product-card img {
     padding: 20px;
     margin: auto;
 }
@@ -152,26 +152,26 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.meal-card {
+.product-card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.meal-card:hover {
+.product-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 767px) {
-    .meal-card:hover {
+    .product-card:hover {
         transform: scale(1.1);
 
     }
 }
 
-.meal-card,
+.product-card,
 .product-card,
 .list-group,
-.meal-card img {
+.product-card img {
     border-radius: 25px;
 }
 
@@ -188,12 +188,12 @@ form {
         height: 30px;
     }
 
-    #mealType h2,
+    #productType h2,
     #sec2 h3 {
         font-size: 30px;
     }
 
-    #mealType p {
+    #productType p {
         font-size: 24px;
     }
 
