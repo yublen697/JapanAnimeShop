@@ -74,7 +74,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="nav-link" href="/order_backend">
-                  <img class="me-2" src="/img/paw-print.png" alt="">訂餐</a>
+                  <img class="me-2" src="/img/paw-print.png" alt="">訂單</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="nav-link" href="/user_backend">

@@ -92,23 +92,6 @@
   </div>
 </header>
 
-<!-- section1 區域 大圖片輪播 -->
-<section id="sec1">
-  <div class="container-xl">
-    <div class="row">
-      <div class="col-12 text-center">
-        <div class="embed-responsive embed-responsive-16by9">
-          <video autoplay controls="false" height="500"
-                 class="embed-responsive-item">
-            <source src="/img/banner/banner-product.mp4" type="video/mp4">
-            您的瀏覽器不支援影片播放功能。
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- section2 區域 Product -->
 <section id="sec2">
   <div class="container-xl my-3">

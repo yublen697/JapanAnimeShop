@@ -78,33 +78,10 @@
     </div>
 </header>
 
-<!-- section1 區域 大圖片輪播 -->
-<section id="sec1">
-    <div class="container-xl mb-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <video autoplay controls="false" height="500" class="embed-responsive-item">
-                        <source src="/img/banner/banner-location.mp4" type="video/mp4">
-                        您的瀏覽器不支援影片播放功能。
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- section2 區域 地圖 -->
 <section id="sec2">
     <div class="container-xl mb-5">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1807.5016141302528!2d121.56336386846506!3d25.03396451076476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyXMTAx6LO854mp5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1716007213274!5m2!1szh-TW!2stw"
-                        width="800" height="600" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
             <div class="col-12 col-md-6">
                 <div class="text-center">
                     <h2>我們的位置</h2>
@@ -149,11 +126,6 @@
             <div class="col-6 col-md-2 pt-1 d-flex flex-column">
                 <h3 class="title">會員</h3>
                 <a href="/user">User</a>
-            </div>
-
-            <div class="col-12 d-flex align-items-center">
-                <img src="/img/Logo/Logo.gif" class="img-fluid me-3" alt="...">
-                <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Ryan</p>
             </div>
         </div>
     </div>
