@@ -36,7 +36,7 @@
     <!-- 設定網頁 icon -->
     <link rel="icon" href="./img/Logo/Logo.png" type="image/">
 
-    <title>貓貓早午餐Cat Brunch</title>
+    <title>東方購物鄉</title>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 
                     <a class="navbar-brand d-flex align-items-center" href="./index">
                         <img src="/img/Logo/Logo.gif" class="Logo" height="90" alt="">
-                        <h1 class="m-0 ms-3" id="h1">貓貓後臺</h1>
+                        <h1 class="m-0 ms-3" id="h1">東方購物鄉後臺</h1>
                     </a>
 
                     <p class="hello"></p>
@@ -76,7 +76,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="nav-link" href="/order_backend">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">訂餐</a>
+                                    <img class="me-2" src="/img/paw-print.png" alt="">訂單</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="nav-link" href="/member_backend">

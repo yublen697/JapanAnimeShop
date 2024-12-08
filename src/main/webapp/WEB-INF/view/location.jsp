@@ -19,7 +19,7 @@
     <!-- 設定網頁 icon -->
     <link rel="icon" href="/img/Logo/Logo.png" type="image/">
 
-    <title>MyGo</title>
+    <title>東方購物鄉</title>
 </head>
 
 <body>

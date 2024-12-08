@@ -29,7 +29,7 @@
     <!-- 設定網頁 icon -->
     <link rel="icon" href="/img/Logo/Logo.png" type="image/">
 
-    <title></title>
+    <title>東方購物鄉</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 
                     <a class="navbar-brand d-flex align-items-center" href="./index">
                         <img src="/img/Logo/Logo.gif" class="Logo" height="90" alt="">
-                        <h1 class="m-0 ms-3" id="h1">貓貓早午餐</h1>
+                        <h1 class="m-0 ms-3" id="h1">東方購物鄉</h1>
                     </a>
 
                     <p class="hello"></p>
