@@ -83,15 +83,15 @@
         </div>
     </div>
 </header>
-<!-- section1 區域 大圖片輪播 -->
+<!-- section1 區域 大圖片 -->
 <section id="sec1">
     <div class="container-xl mb-5">
         <div class="row">
             <div class="col-12 text-center">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <video autoplay controls="false" height="500" class="embed-responsive-item">
-                        <source src="/img/banner/banner-user.png" alt="">
-                    </video>
+                    <ul autoplay controls="false" height="500" class="embed-responsive-item">
+                        <img src="/img/banner/banner-user.png" alt="">
+                    </ul>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 <div class="login mx-auto animate__animated animate__zoomIn">
                     <form id="loginForm">
                         <fieldset>
-                            <h2><i class="fa fa-paw"></i> 登 入</h2>
+                            <h2> 登 入</h2>
                             <p>還不是會員嗎？<a href="#" id="toRegister">點我加入</a></p>
                             <label for="account">帳 號</label>
                             <div class="input-group mb-3">
@@ -150,7 +150,7 @@
                         <fieldset>
                             <!-- HttpMethod 隱藏欄位 -->
                             <input name="_method" type="hidden" value="${ _method }" />
-                            <h2><i class="fa fa-paw"></i> 加入會員</h2>
+                            <h2>加入會員</h2>
                             <p>已經是會員了嗎？<a href="#" id="toLogin">點我登入</a></p>
                             <!-- 帳號 -->
                             <div class="row">
