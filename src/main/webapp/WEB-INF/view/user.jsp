@@ -83,7 +83,20 @@
         </div>
     </div>
 </header>
-
+<!-- section1 區域 大圖片輪播 -->
+<section id="sec1">
+    <div class="container-xl mb-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video autoplay controls="false" height="500" class="embed-responsive-item">
+                        <source src="/img/banner/banner-user.png" alt="">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- section2 區域 會員 -->
 <section id="sec2">
     <div class="container-xl">
