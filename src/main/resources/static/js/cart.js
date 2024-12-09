@@ -1,16 +1,6 @@
 $(document).ready(function () {
-    // 初始化頁面加載時顯示分頁
-    initializePagination('appetizer');
-
-    // 獲取按鈕對應的分類
-    $('.list-group-item').click(function () {
-        var category = $(this).data('category');
-    });
-
-    // 當視窗大小改變時重新初始化分頁
-    $(window).resize(function () {
-        initializePagination();
-    });
+    // 初始化頁面時加載購物車
+    renderCart();
 
     // 定義全局變數，初始值為 localStorage 中的值或 null
     let orderData = JSON.parse(localStorage.getItem('orderData')) || {
@@ -19,12 +9,6 @@ $(document).ready(function () {
         orderTime: null,
         items: []
     };
-
-    // 監聽選擇框的變化事件
-    $('.form-select').change(function () {
-        orderData.tableNumber = $(this).val();
-        saveOrderData();
-    });
 
     // 渲染購物車
     function renderCart() {
@@ -62,36 +46,6 @@ $(document).ready(function () {
     function saveOrderData() {
         localStorage.setItem('orderData', JSON.stringify(orderData));
     }
-
-    // 將項目添加到購物車
-    function addToCart(item) {
-        let existingItem = orderData.items.find(cartItem => cartItem.orderName === item.orderName);
-        if (existingItem) {
-            existingItem.quantity++; // 如果存在，增加其數量
-        } else {
-            orderData.items.push({ ...item, quantity: 1 }); // 如果不存在，將其添加到購物車中
-        }
-
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            iconColor: '#4CAF50',
-            title: `${item.orderName}已加入購物車`,
-            showConfirmButton: false,
-            timer: 1000
-        });
-
-        renderCart(); // 渲染更新後的購物車
-    }
-
-    // 點擊添加到購物車按鈕時將商品添加到購物車
-    $('#meal-container').on('click', '.add-to-cart', function () {
-        let orderName = $(this).data('name'); // 獲取商品名稱
-        let price = $(this).data('price'); // 獲取商品價格
-        if (orderName && price) { // 檢查名稱和價格是否有效
-            addToCart({ orderName, price }); // 添加到購物車
-        }
-    });
 
     // 點擊刪除按鈕時從購物車中移除對應項目
     $('#cart-items').on('click', '.remove-item', function () {
@@ -143,7 +97,6 @@ $(document).ready(function () {
     $('#submit-order').on('click', function (event) {
         event.preventDefault(); // 阻止表單的默認提交行為
 
-
         if (orderData.items.length === 0) {
             Swal.fire({
                 icon: "error",
@@ -154,23 +107,8 @@ $(document).ready(function () {
             return;
         }
 
-        // 更新訂單時間
-        orderData.orderTime = new Date().toISOString().replace('T', ' ').substring(0, 19); // 新增訂單時間，格式為 "yyyy-MM-dd HH:mm:ss"
+        orderData.orderTime = new Date().toISOString().replace('T', ' ').substring(0, 19); // 新增訂單時間
 
-        /*
-        // 獲取當前時間
-        var currentDate = new Date();
-
-        // 格式化輸出
-        orderData.orderTime = currentDate.getFullYear() + '-' +
-            ('0' + (currentDate.getMonth() + 1)).slice(-2) + '-' +
-            ('0' + currentDate.getDate()).slice(-2) + ' ' +
-            ('0' + currentDate.getHours()).slice(-2) + ':' +
-            ('0' + currentDate.getMinutes()).slice(-2) + ':' +
-            ('0' + currentDate.getSeconds()).slice(-2);
-         */
-
-        // 使用 AJAX 發送資料到後端
         $.ajax({
             url: 'http://localhost:8080/order_backend/', // 替換為你的後端提交訂單的 URL
             type: 'POST',
@@ -209,43 +147,4 @@ $(document).ready(function () {
         });
     });
 
-    renderCart(); // 在頁面載入時渲染購物車
-
-    // 分頁相關函數
-    function getPerPage() {
-        if (window.innerWidth < 767) {
-            return 4;
-        } else if (window.innerWidth < 992) {
-            return 6;
-        } else {
-            return 9;
-        }
-    }
-
-    function initializePagination() {
-        var perPage = getPerPage();
-        // 總共有多少個項目
-        var numItems = $(".list-item").length;
-        // 初始化時先顯示前幾個項目
-        $(".list-item").hide().slice(0, perPage).show();
-
-        // 如果頁面已經有分頁控制元件，先移除
-        if ($(".pagination-container").length) {
-            $(".pagination-container").remove();
-        }
-
-        // 添加新的分頁控制元件
-        $("#pagination-container").pagination({
-            items: numItems,
-            itemsOnPage: perPage,
-            cssStyle: "light-theme",
-            prevText: "&laquo;",
-            nextText: "&raquo;",
-            onPageClick: function (pageNumber) {
-                var showFrom = perPage * (pageNumber - 1);
-                var showTo = showFrom + perPage;
-                $(".list-item").hide().slice(showFrom, showTo).show();
-            },
-        });
-    }
 });

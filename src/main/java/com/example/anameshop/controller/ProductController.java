@@ -23,7 +23,7 @@ public class ProductController {
     private ProductService productService;
 
     // 將資料傳到 product
-    @GetMapping("/Product")
+    @GetMapping("/product")
     public String getAllProduct(Model model) {
         // List<Product> productList = productService.getAllProduct();
         List<Product> productList = productService.getAllProduct().stream()

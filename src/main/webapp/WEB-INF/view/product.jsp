@@ -30,6 +30,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
   <!-- js -->
   <script src="/js/product.js"></script>
+  <script src="/js/cart.js"></script>
   <!-- 設定網頁 icon -->
   <link rel="icon" href="/img/Logo/Logo.png" type="image/">
 
@@ -94,7 +95,7 @@
 
 <!-- section2 區域 Product -->
 <section id="sec2">
-  <div class="container-xl my-3">
+  <div class="container-xl mb-4">
     <div class="row">
       <!-- 商品總類 -->
       <div class="col-12 col-md-3">
@@ -126,37 +127,23 @@
       </div>
       <!-- 商品內容 -->
       <div class="col-12 col-md-9">
-        <!-- 商品內容顯示 -->
-        <div id="productType" class="content">
-
-          <div id="list-wrapper">
-            <div class="appetizer row">
-              <!-- 回圈開始 -->
-              <c:forEach items="${ productList }" var="product">
-
-                <div class="col-12 col-md-6 col-lg-4 list-item my-3 animate__animated animate__zoomIn">
-                  <div class="card product-card p-2 text-center h-100 mx-sm-auto">
-                    <img src="/img/product/${ product.productType }/${ product.productImage }" class="card-img-top img-fluid p-2 w-100 h-100" alt="${ product.productName }">
-                    <div class="card-body p-1 d-flex flex-column h-100">
-                      <h2 class="card-title">${ product.productName }</h2>
-                      <p class="card-text flex-grow-1">${
-                              product.description }</p>
-                    </div>
-                    <div class="p-2 d-flex justify-content-evenly">
-                      <p class="">原&#12288;價：NT$${ product.productPrice }元
-                      </p>
-                      <p class="">會員價：NT$${
-                              Math.round(product.productPrice*0.9) }元</p>
-                    </div>
-                  </div>
+        <div id="list-wrapper" class="row mx-2">
+          <c:forEach items="${ productList }" var="product">
+            <div class="col-12 col-md-6 col-lg-4 list-item my-3 animate__animated animate__zoomIn">
+              <div class="card product-card p-2 text-center h-100 mx-sm-auto">
+                <img src="/img/product/${ product.productType }/${ product.productImage }" class="card-img-top img-fluid p-2 w-100 h-100" alt="${ product.productName }">
+                <div class="card-body p-1 d-flex flex-column h-100">
+                  <h2 class="card-title">${ product.productName }</h2>
+                  <p class="card-text flex-grow-1">${ product.description }</p>
                 </div>
-
-              </c:forEach>
-              <!-- 回圈結束 -->
+                <div class="p-2 d-flex justify-content-evenly">
+                  <button class="btn btn-outline-primary add-to-cart" data-name="${ product.productName }" data-price="${ product.productPrice }">加入購物車(NT$${ product.productPrice }元)</button>
+                </div>
+              </div>
             </div>
-          </div>
-
+          </c:forEach>
         </div>
+
         <!-- 商品內容顯示結束 -->
 
         <!-- 分頁 pagination-container -->
@@ -184,29 +171,7 @@
         <h3 class="title">首頁</h3>
         <a href="/index">Home</a>
       </div>
-      <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title active">商品</h3>
-        <a href="/product" class="active">Product</a>
-      </div>
-      <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title">活動</h3>
-        <a href="/news">News</a>
-      </div>
-      <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title">訂單</h3>
-        <a href="/order">Order</a>
-      </div>
-      <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title">地點</h3>
-        <a href="/location">Location</a>
-      </div>
-      <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-        <h3 class="title">會員</h3>
-        <a href="/user">User</a>
-      </div>
-
       <div class="col-12 d-flex align-items-center">
-        <img src="/img/Logo/Logo.gif" class="img-fluid me-3" alt="...">
         <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Ryan
         </p>
       </div>

@@ -20,8 +20,8 @@
     --c-base-10: rgba(130, 180, 240, 1.0);
     --c-base-07: rgba(130, 180, 240, 0.7);
     --c-sub1-10: rgb(255, 255, 255);
-    --c-sub2-10: rgb(255, 210, 200);
-    --c-sub3-10: rgba(255, 150, 50, 1.0);
+    --c-sub2-10: rgb(202, 200, 255);
+    --c-sub3-10: rgb(255, 74, 50);
     --c-sub3-08: rgba(255, 150, 50, 0.8);
     --c-sub3-05: rgba(255, 150, 50, 0.5);
     --c-sub4-10: rgba(255, 200, 220, 1.0);
@@ -290,7 +290,7 @@ video::-webkit-media-controls {
 
 /* footer 區域 */
 footer {
-    min-height: 200px;
+    min-height: 50px;
     background-color: var(--c-sub2-10);
     padding-top: 20px;
     font-weight: bold;

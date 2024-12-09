@@ -114,16 +114,6 @@ INSERT INTO product (product_name, product_type, description, product_price, pro
 ('法國土司', 'dessert', '吐司片浸泡在蛋液中烤製而成。口感鬆軟、香甜，以果醬、奶油及水果裝飾。', 80, 'FrenchToast.jpg'),
 ('鬆餅', 'dessert', '蓬鬆、鬆軟的早餐或下午茶點心，口感柔軟、帶有牛奶和麵粉的香氣。配果醬、奶油或楓糖漿食用。', 60, 'PanCake.jpg'),
 ('格子鬆餅', 'dessert', '鬆餅糊在煎鍋中烤製而成，形狀像格子一樣。口感鬆軟、微甜。', 65, 'Waffles.jpg'),
-('紅茶', 'drinks', '濃郁的香氣和豐富的口感，茶湯呈深紅色。具有麥芽香風味。', 40, 'BlackTea.jpg'),
-('綠茶', 'drinks', '茶葉吸收了茉莉花的芳香。茶湯顏色清亮，口感清新，帶有濃郁的茉莉花香和柔和的綠茶味道。', 40, 'GreenTea.jpg'),
-('柳橙汁', 'drinks', '新鮮柳橙榨取的果汁，酸甜可口，富含維生素C。', 60, 'OrangeJuice.jpg'),
-('西瓜汁', 'drinks', '新鮮西瓜榨取的果汁，口感清爽、甜美，是夏季消暑的佳品。', 60, 'WatermelonJuice.jpg'),
-('可樂', 'drinks', '甜味碳酸飲料，帶有獨特的香料和焦糖風味。', 50, 'Cola.jpg'),
-('草莓氣泡飲', 'drinks', '入草莓口味的碳酸水，口感清爽，有微微的甜味和草莓的芳香。', 80, 'StrawberrySoda.jpg'),
-('檸檬氣泡飲', 'drinks', '檸檬口味的碳酸水，具有清新的酸味和氣泡帶來的獨特口感。', 80, 'LemonSoda.jpg'),
-('珍珠奶茶', 'drinks', '紅茶與牛奶的結合帶來香甜順滑的口感，加上口感Q彈的珍珠。', 70, 'BubbleMilkTea.jpg'),
-('拿鐵', 'drinks', '濃縮咖啡和牛奶製成的咖啡飲品，口感順滑。', 90, 'Latte.jpg'),
-('抹茶拿鐵', 'drinks', '抹茶粉和牛奶混合而成的飲品，具有濃郁的抹茶香氣和奶香，口感細膩順滑。', 100, 'MatchaLatte.jpg');
 
 INSERT INTO news (news_title, content, news_image, start_date, end_date, combo_name, combo_price) VALUES
 ('情人節限定', '帶著另一伴一起來用餐吧！', 'valentines.jpg', '2024-02-01', '2024-03-01', '情人節套餐', 280),
