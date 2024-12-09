@@ -102,30 +102,7 @@
 
     <div class="container-xl text-center">
         <div class="row">
-
-            <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title">首頁</h3>
-                <a href="/index">Home</a>
-            </div>
-            <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title">商品</h3>
-                <a href="/product">Product</a>
-            </div>
-            <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title">活動</h3>
-                <a href="/news">News</a>
-            </div>
-            <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title">訂單</h3>
-                <a href="/order">Order</a>
-            </div>
-            <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title active">地點</h3>
-                <a href="/location" class="active">Location</a>
-            </div>
-            <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                <h3 class="title">會員</h3>
-                <a href="/user">User</a>
+            <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Ryan</p>
             </div>
         </div>
     </div>
