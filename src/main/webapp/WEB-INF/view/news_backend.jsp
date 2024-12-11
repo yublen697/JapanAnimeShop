@@ -67,7 +67,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0 ps-2 ps-md-0">
                             <li class="nav-item">
                                 <a class="nav-link" id="nav-link" href="/product_backend">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">菜單</a>
+                                    <img class="me-2" src="/img/paw-print.png" alt="">商品</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" id="nav-link"
