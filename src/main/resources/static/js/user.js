@@ -183,7 +183,7 @@ $(document).ready(function () {
                         if (response.user.isUser == 1) {
                             // 重導到後台 user_backend 頁面
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:8080/menu_backend';
+                                window.location.href = 'http://localhost:8080/product_backend';
                             }, 1000); // 1000 毫秒 = 1 秒
                         } else {
                             // 非管理者重導到前端頁面
