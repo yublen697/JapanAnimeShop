@@ -29,7 +29,6 @@
   <!-- SimplePagination -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
   <!-- js -->
-  <script src="/js/product.js"></script>
   <script src="/js/cart.js"></script>
   <!-- 設定網頁 icon -->
   <link rel="icon" href="/img/Logo/Logo.png" type="image/">
@@ -129,6 +128,7 @@
       <div class="col-12 col-md-9">
         <div id="list-wrapper" class="row mx-2">
           <c:forEach items="${ productList }" var="product">
+
             <div class="col-12 col-md-6 col-lg-4 list-item my-3 animate__animated animate__zoomIn">
               <div class="card product-card p-2 text-center h-100 mx-sm-auto">
                 <img src="/img/product/${ product.productType }/${ product.productImage }" class="card-img-top img-fluid p-2 w-100 h-100" alt="${ product.productName }">

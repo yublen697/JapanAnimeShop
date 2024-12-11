@@ -1,6 +1,7 @@
 package com.example.anameshop.controller;
 
 import com.example.anameshop.model.entity.Product;
+import com.example.anameshop.service.OrderService;
 import com.example.anameshop.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,12 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
-
     // 將資料傳到 product
     @GetMapping("/product")
     public String getAllProduct(Model model) {
         // List<Product> productList = productService.getAllProduct();
         List<Product> productList = productService.getAllProduct().stream()
-                .filter(product -> product.getProductType().equals("appetizer"))
+                .filter(product -> product.getProductType().equals("book"))
                 .toList();
 
         model.addAttribute("productList", productList);
@@ -39,7 +39,7 @@ public class ProductController {
     public String getAllOrder(Model model) {
         // List<Product> productList = productService.getAllProduct();
         List<Product> productList = productService.getAllProduct().stream()
-                .filter(product -> product.getProductType().equals("appetizer"))
+                .filter(product -> product.getProductType().equals("book"))
                 .toList();
 
         model.addAttribute("productList", productList);
@@ -51,7 +51,7 @@ public class ProductController {
     public String product_backendPage(Model model) {
         // List<Product> productList = productService.getAllProduct();
         List<Product> productList = productService.getAllProduct().stream()
-                .filter(product -> product.getProductType().equals("appetizer"))
+                .filter(product -> product.getProductType().equals("book"))
                 .toList();
 
         model.addAttribute("productList", productList);

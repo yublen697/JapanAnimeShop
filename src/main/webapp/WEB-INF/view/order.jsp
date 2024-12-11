@@ -31,7 +31,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
     <!-- js -->
     <script src="/js/cart.js"></script>
-    <script src="/js/product.js"></script>
     <!-- sweetalert2 -->
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css" rel="stylesheet">
 
@@ -97,7 +96,7 @@
     </div>
 </header>
 
-<!-- section2 區域 商品及購物車 -->
+<!-- section2 區域 購物車 -->
 <section id="sec2">
     <div class="container-xl mb-4">
         <div class="row">
