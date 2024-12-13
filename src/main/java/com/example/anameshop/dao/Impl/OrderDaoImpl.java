@@ -48,7 +48,7 @@ public class OrderDaoImpl implements OrderDao {
     // 新增 Order
     @Override
     public int createOrder(OrderDto orderDto) {
-        String sql = "INSERT INTO orders (total_price, order_time) VALUES (?,?,?)";
+        String sql = "INSERT INTO orders (total_price, order_time) VALUES (?,?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
 
         jdbcTemplate.update(connection ->{

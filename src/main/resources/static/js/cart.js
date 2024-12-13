@@ -53,36 +53,6 @@ $(document).ready(function () {
         localStorage.setItem('orderData', JSON.stringify(orderData));
     }
 
-    // 將項目添加到購物車
-    function addToCart(item) {
-        let existingItem = orderData.items.find(cartItem => cartItem.orderName === item.orderName);
-        if (existingItem) {
-            existingItem.quantity++; // 如果存在，增加其數量
-        } else {
-            orderData.items.push({ ...item, quantity: 1 }); // 如果不存在，將其添加到購物車中
-        }
-
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            iconColor: '#4CAF50',
-            title: `${item.orderName}已加入購物車`,
-            showConfirmButton: false,
-            timer: 1000
-        });
-
-        renderCart(); // 渲染更新後的購物車
-    }
-
-    // 點擊添加到購物車按鈕時將商品添加到購物車
-    $('#product-container').on('click', '.add-to-cart', function () {
-        let orderName = $(this).data('name'); // 獲取商品名稱
-        let price = $(this).data('price'); // 獲取商品價格
-        if (orderName && price) { // 檢查名稱和價格是否有效
-            addToCart({ orderName, price }); // 添加到購物車
-        }
-    });
-
     // 點擊刪除按鈕時從購物車中移除對應項目
     $('#cart-items').on('click', '.remove-item', function () {
         let index = $(this).data('index'); // 獲取項目索引

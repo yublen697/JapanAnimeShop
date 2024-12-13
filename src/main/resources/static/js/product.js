@@ -12,6 +12,50 @@ $(document).ready(function () {
         getPerPage();
         initializePagination();
     });
+    // 初始化購物車資料
+    let orderData = JSON.parse(localStorage.getItem('orderData')) || {
+        totalPrice: 0,
+        items: []
+    };
+
+    // 保存購物車資料
+    function saveOrderData() {
+        localStorage.setItem('orderData', JSON.stringify(orderData));
+    }
+
+    // 添加商品到購物車
+    function addToCart(item) {
+        let existingItem = orderData.items.find(cartItem => cartItem.orderName === item.orderName);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            orderData.items.push({ ...item, quantity: 1 });
+        }
+        orderData.totalPrice += item.price;
+        saveOrderData();
+
+        // 成功提示
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            iconColor: '#4CAF50',
+            title: `${item.orderName} 已加入購物車`,
+            text: `當前總金額：NT$${orderData.totalPrice}`,
+            showConfirmButton: false,
+            timer: 1000
+        });
+    }
+
+    // 綁定按鈕點擊事件
+    $(document).on('click', '.add-to-cart', function () {
+        let orderName = $(this).data('name');
+        let price = parseFloat($(this).data('price'));
+        if (orderName && price) {
+            addToCart({ orderName, price });
+        } else {
+            console.error('無效的商品資料', { orderName, price });
+        }
+    });
 
     // 根據視窗寬度設置每頁顯示的項目數量
     function getPerPage() {

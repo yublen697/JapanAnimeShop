@@ -28,8 +28,10 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- SimplePagination -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+  <!-- sweetalert2 -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css" rel="stylesheet">
   <!-- js -->
-  <script src="/js/cart.js"></script>
+  <script src="/js/product.js"></script>
   <!-- 設定網頁 icon -->
   <link rel="icon" href="/img/Logo/Logo.png" type="image/">
 
