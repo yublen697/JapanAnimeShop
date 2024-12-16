@@ -60,7 +60,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="nav-link" href="/order">
-                  <img class="me-2" src="/img/paw-print.png" alt="">訂單</a>
+                  <img class="me-2" src="/img/paw-print.png" alt="">購物車</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="nav-link" href="/location">
@@ -141,7 +141,7 @@
   <div class="container-xl text-center">
     <div class="row">
       <div class="col-12 d-flex align-items-center">
-        <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Ryan</p>
+        <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Tomorin</p>
       </div>
     </div>
   </div>

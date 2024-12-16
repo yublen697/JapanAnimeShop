@@ -139,7 +139,7 @@
                                         <form action="${ pageContext.request.contextPath }/order_backend/${ order.orderId }" id="delete-form" method="POST">
                                             <a href="${ pageContext.request.contextPath }/order_backend/${ order.orderId }" class="btn btn-outline-success details"
                                                 data-bs-toggle="modal" data-bs-target="#detailsForm" data-bs-whatever="@mdo"
-                                                data-id="${ order.orderId }" data-table-number="${ order.tableNumber }" data-total-price="${ order.totalPrice }">明細</a>
+                                                data-id="${ order.orderId }" data-total-price="${ order.totalPrice }">明細</a>
                                             <!-- HttpMethod 隱藏欄位 -->
                                             <input name="_method" type="hidden" value="delete" />
                                             <input type="hidden" name="orderId" value="${ order.orderId }" />
@@ -170,10 +170,10 @@
 
 	<!-- 明細表單 -->
     <div class="modal fade" id="detailsForm" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel"><i class="fa fa-paw"></i> 訂單明細</h3>
+                    <h3 class="modal-title" id="exampleModalLabel"> 訂單明細</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -192,7 +192,7 @@
         <div class="container-xl text-center">
             <div class="row">
                 <div class="col-12 d-flex align-items-center">
-                    <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Ryan
+                    <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Tomorin
                     </p>
                 </div>
             </div>

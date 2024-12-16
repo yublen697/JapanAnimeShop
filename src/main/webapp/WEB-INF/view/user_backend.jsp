@@ -264,7 +264,7 @@
                     <a href="/index">Home</a>
                 </div>
                 <div class="col-12 d-flex align-items-center">
-                    <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Ryan
+                    <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Tomorin
                     </p>
                 </div>
             </div>
