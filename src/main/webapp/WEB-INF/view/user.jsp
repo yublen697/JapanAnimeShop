@@ -279,7 +279,7 @@
                 <div class="forget mx-auto d-none animate__animated animate__zoomIn">
                     <form id="forgetForm">
                         <fieldset>
-                            <h2><i class="fa fa-paw"></i> 忘記密碼</h2>
+                            <h2>忘記密碼</h2>
                             <p>想到密碼了？<a href="#" id="toLoginFromForget">回登入頁面</a></p>
                             <label for="account">請輸入Email</label>
                             <div class="input-group mb-3">
