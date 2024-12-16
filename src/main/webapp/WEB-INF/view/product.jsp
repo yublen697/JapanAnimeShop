@@ -32,6 +32,7 @@
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css" rel="stylesheet">
   <!-- js -->
   <script src="/js/product.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- 設定網頁 icon -->
   <link rel="icon" href="/img/Logo/Logo.png" type="image/">
 

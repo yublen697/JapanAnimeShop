@@ -12,6 +12,8 @@ $(document).ready(function () {
         getPerPage();
         initializePagination();
     });
+
+
     // 初始化購物車資料
     let orderData = JSON.parse(localStorage.getItem('orderData')) || {
         totalPrice: 0,
@@ -39,8 +41,7 @@ $(document).ready(function () {
             position: "center",
             icon: "success",
             iconColor: '#4CAF50',
-            title: `${item.orderName} 已加入購物車`,
-            text: `當前總金額：NT$${orderData.totalPrice}`,
+            title: `${item.orderName}已加入購物車`,
             showConfirmButton: false,
             timer: 1000
         });
