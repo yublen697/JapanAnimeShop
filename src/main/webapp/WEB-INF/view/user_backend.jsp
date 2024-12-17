@@ -30,7 +30,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- SimplePagination -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+    <!-- bootstrap5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.all.min.js"></script>
     <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/script.js"></script>
     <script src="/js/user_backend.js"></script>
     <!-- sweetalert2 -->
@@ -84,8 +89,8 @@
                                     <img class="me-2" src="/img/paw-print.png" alt="">會員</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link logout" href="javascript:void(0);" id="nav-link" type="button">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">登出</a>
+                                    <a class="nav-link logout" id="nav-link" type="button">
+                                        <img class="me-2" src="/img/paw-print.png" alt="">登出</a>
                                 </li>
                             </ul>
 
@@ -258,11 +263,6 @@
 
         <div class="container-xl text-center">
             <div class="row">
-
-                <div class="col-6 col-md-2 pt-1 d-flex flex-column">
-                    <h3 class="title">首頁</h3>
-                    <a href="/index">Home</a>
-                </div>
                 <div class="col-12 d-flex align-items-center">
                     <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Tomorin
                     </p>
@@ -272,10 +272,6 @@
 
     </footer>
 
-	<!-- bootstrap5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- sweetalert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

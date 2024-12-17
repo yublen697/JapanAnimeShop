@@ -66,12 +66,8 @@
                                     <img class="me-2" src="/img/paw-print.png" alt="">購物車</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/location">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">地點</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link active" id="nav-link" href="/user">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">會員</a>
+                                    <img class="me-2" src="/img/paw-print.png" alt="">登入</a>
                             </li>
                         </ul>
 
@@ -368,7 +364,6 @@
                     </div>
                 </div>
                 <!-- Modal -->
-
             </div>
         </div>
     </div>

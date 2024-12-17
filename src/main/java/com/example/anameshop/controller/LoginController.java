@@ -53,7 +53,7 @@ public class LoginController {
     private String logout(HttpSession session) {
         System.out.println("登出成功");
         session.invalidate();
-        return "redirect:/index";
+        return "redirect:/user";
     }
 
 }

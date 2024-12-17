@@ -73,7 +73,7 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public int deleteOrder(Integer orderId) {
         // 刪除 order_items 中的記錄
-        String deleteOrderItemSql = "DELETE FROM orders_item WHERE order_id = ?";
+        String deleteOrderItemSql = "DELETE FROM order_items WHERE order_id = ?";
         jdbcTemplate.update(deleteOrderItemSql, orderId);
 
         // 刪除 order 中的記錄

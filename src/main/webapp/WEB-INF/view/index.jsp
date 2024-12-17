@@ -22,6 +22,10 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- js -->
   <script src="/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- sweetalert2 -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css" rel="stylesheet">
+
 
   <title>東方購物鄉</title>
 </head>
@@ -63,12 +67,8 @@
                   <img class="me-2" src="/img/paw-print.png" alt="">購物車</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="nav-link" href="/location">
-                  <img class="me-2" src="/img/paw-print.png" alt="">地點</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="nav-link" href="/user">
-                  <img class="me-2" src="/img/paw-print.png" alt="">會員</a>
+                <a class="nav-link logout" id="nav-link" type="button">
+                  <img class="me-2" src="/img/paw-print.png" alt="">登出</a>
               </li>
             </ul>
 
@@ -80,6 +80,21 @@
     </div>
   </div>
 </header>
+
+<!-- section1 區域 大圖片 -->
+<section id="sec1">
+  <div class="container-xl mb-5">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+          <ul autoplay controls="false" height="500" class="embed-responsive-item">
+            <img src="/img/banner/banner-user.png" alt="">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- section2 區域 About Me -->
 <section id="sec2">
@@ -98,7 +113,7 @@
           <div class="card-img-overlay">
             <h2 class="card-title">About Me</h2>
             <p class="card-text">
-              因為喜歡貓貓也喜歡到處吃美食，所以把吃東西的興趣加上貓咪的元素來做成一個早午餐的網站，將來有朋友想要開咖啡廳或是早午餐店的話，就會有基本的概念及想法。
+              歡迎來到人與妖怪的世界！幻想鄉
             </p>
           </div>
         </div>
