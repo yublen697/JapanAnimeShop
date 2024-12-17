@@ -24,8 +24,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- SimplePagination -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+    <!-- sweetalert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/news.js"></script>
+    <script src="/js/script.js"></script>
     <!-- 設定網頁 icon -->
     <link rel="icon" href="/img/Logo/Logo.png" type="image/">
 
@@ -67,12 +71,8 @@
                                     <img class="me-2" src="/img/paw-print.png" alt="">購物車</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/location">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">地點</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/user">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">會員</a>
+                                <a class="nav-link logout" id="nav-link" type="button">
+                                    <img class="me-2" src="/img/paw-print.png" alt="">登出</a>
                             </li>
                         </ul>
                     </nav>

@@ -29,6 +29,7 @@
     <!-- SimplePagination -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
     <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/script.js"></script>
     <script src="/js/news_backend.js"></script>
     <!-- sweetalert2 -->

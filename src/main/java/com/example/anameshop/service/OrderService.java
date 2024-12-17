@@ -72,7 +72,6 @@ public class OrderService {
     // 刪除 order
     @Transactional
     public void deleteOrder(Integer orderId) {
-
         orderDao.deleteOrder(orderId);
     }
 

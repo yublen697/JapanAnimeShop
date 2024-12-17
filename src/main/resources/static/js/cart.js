@@ -1,7 +1,21 @@
 $(document).ready(function () {
+    var userName = localStorage.getItem('userName'); // 從 localStorage 獲取 userName
+    if (!userName) {
+        // 顯示提示訊息
+        Swal.fire({
+            icon: 'warning',
+            title: '未登入',
+            text: '您尚未登入，將自動跳轉到登入頁面。',
+            confirmButtonText: '確定'
+        }).then(() => {
+            // 跳轉到登入頁面
+            window.location.href = '/user'; // 替換成你的登入頁面路徑
+        });
+
+        return; // 阻止後續功能執行
+    }
     // 初始化頁面加載時顯示分頁
     initializePagination('appetizer');
-
 
     // 當視窗大小改變時重新初始化分頁
     $(window).resize(function () {
