@@ -11,6 +11,43 @@
 
 }
 
+.OrderRegister {
+    min-width: 300px;
+    max-width: 370px;
+    padding: 30px 20px;
+    margin: 0px 10px;
+    background-color: var(--c-base-07);
+    border-radius: 25px;
+}
+#sec2 .OrderRegister h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+#sec2 .OrderRegister p{
+    text-align: center;
+    text-indent: 0;
+    font-size: 1.2rem;
+}
+
+.OrderRegister label{
+    font-size: 24px;
+}
+
+.form-control {
+    font-size: 24px;
+    border-radius: 25px;
+}
+
+.input-group-text {
+    font-size: 26px;
+}
+
+.input-group {
+    flex-wrap: nowrap;
+}
+
+
 #sec2 .product-type .list-group-item img {
     width: 30px;
     height: 30px;

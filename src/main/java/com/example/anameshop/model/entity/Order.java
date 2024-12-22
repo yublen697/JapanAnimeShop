@@ -13,6 +13,9 @@ import java.util.Date;
 @AllArgsConstructor
 public class Order {
     private Integer orderId;
+    private String userName;
+    private String userAddress;
+    private String userPhone;
     private String orderName;
     private Integer quantity;
     private Integer price;

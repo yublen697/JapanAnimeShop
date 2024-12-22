@@ -54,6 +54,9 @@ CREATE TABLE orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     order_time DATETIME DEFAULT CURRENT_TIMESTAMP
     ALTER TABLE orders ADD COLUMN total_price DECIMAL(10, 2);
+    ADD COLUMN user_name VARCHAR(255),
+    ADD COLUMN user_address VARCHAR(255),
+    ADD COLUMN user_phone VARCHAR(20);
 );
 
 
@@ -71,10 +74,4 @@ CREATE TABLE order_items (
 INSERT INTO user (account, password, salt, name, gender, birthday, email, phone, is_user) VALUES
 ('Tomorin','94f0b3709257680516951d21a0dcb47746eb3a7cf06d95c9e4c75fcb316b946d', '7d27edc27ab19bb04a553c726af68b99','Tomorin','女生', '2006-11-22', 'Tomorin@gmail.com', '0911451422',1),
 ('admin', '8593942338889ef646b2ac418b4c772235d7a0b7b54450e9b19c154ac8efcca2', 'dbe3ace863a8d464bcdbc9d1f15fc19f', 'admin', '女生', '2024-06-01', 'admin@gmail.com', '0900000000', 1),
-('user1', '9c23f5e6df23f05657f6612dea59c74b92b2b038002d3d2856497e32f84ea9f6', 'd0ec7a842109c36ede6c8e04cfbbbb24', '王小明', '女生', '1990-01-01', 'xiaoming@example.com', '0912345678', 2),
-('user2', 'dea503f7cc1f22ee900226a21d23643424ece7a05d392a1aba379c34e159a808', '353b039f856a87465c2e3c07bb2979b8', '林小美', '女生', '1992-02-02', 'xiaomei@example.com', '0923456789', 2),
-('user3', 'e5bf24c6f73311c8ad966686685494a169fdacf3e3d034396d8bb8307ca70d46', 'd9634680cfb402b555c5036b1a9aedf5', '陳大雄', '女生', '1964-03-03', 'daxiong@example.com', '0934567890', 2),
-('user4', 'db08ce00e2ac0ab5dd5a92a2a053e4c5bff3e147c2eb2bbbb1f06ec886392d07', '0db2cc51238f2d8be70cde9f66f7cc5d', '張小花', '男生', '1976-04-04', 'xiaohua@example.com', '0945678901', 2),
-('user5', '0fd92a83bd66c4ed2c7ff88c6aceabcfbee28bf1c7cb6a79754231b448ae8bdd', '9a422fcbce461d111e1f36a9a5f9ecb0', '劉大海', '男生', '1998-05-05', 'dahai@example.com', '0956789012', 2),
-('user6', '8377f460cabeeaa810cf67639e5b739887f43f511e448760458405705c217916', '3d295ea172511a4274b5b8d12ae3b33e', '唯安哥', '女生', '2024-06-11', 'weian18663@gmail.com', '0967890123', 2),
-('user7', '74292812b79f5592466498ca8ca0143231ff9ac06d342a2b409dd2535ba2cf52', '92e07562e1bb2d65c70f2de81aa0f79f', 'user7', '男生', '2024-06-07', 'user7@gmail.com', '0978901234', 2);
+
