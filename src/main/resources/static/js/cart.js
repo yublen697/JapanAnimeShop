@@ -117,6 +117,21 @@ $(document).ready(function () {
     $('#submit-order').on('click', function (event) {
         event.preventDefault(); // 阻止表單的默認提交行為
 
+        const userName = $('#userName').val().trim();
+        const userAddress = $('#userAddress').val().trim();
+        const userPhone = $('#userPhone').val().trim();
+
+        // 驗證輸入欄位
+        if (!userName || !userAddress || !userPhone) {
+            Swal.fire({
+                icon: 'error',
+                title: '請填寫完整的姓名、地址和電話！',
+                timer: 1500,
+                showConfirmButton: false
+            });
+            return;
+        }
+
         if (orderData.items.length === 0) {
             Swal.fire({
                 icon: "error",
@@ -129,7 +144,10 @@ $(document).ready(function () {
 
         // 更新訂單時間
         orderData.orderTime = new Date().toISOString().replace('T', ' ').substring(0, 19); // 新增訂單時間，格式為 "yyyy-MM-dd HH:mm:ss"
-
+        // 增加姓名和地址到訂單資料
+        orderData.userName = userName
+        orderData.userAddress = userAddress
+        orderData.userPhone = userPhone
         /*
         // 獲取當前時間
         var currentDate = new Date();
@@ -162,6 +180,9 @@ $(document).ready(function () {
                     window.location.href = response.redirectUrl;
                 } else {
                     orderData = { // 重置訂單資料
+                        userName: null,
+                        userAddress: null,
+                        userPhone: null,
                         total: 0,
                         orderTime: null,
                         items: []

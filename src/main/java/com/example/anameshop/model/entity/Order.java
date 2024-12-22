@@ -12,7 +12,10 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
-    private Integer orderId;
+    private String orderId;
+    private String userName;
+    private String userAddress;
+    private String userPhone;
     private String orderName;
     private Integer quantity;
     private Integer price;

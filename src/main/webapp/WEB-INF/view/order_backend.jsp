@@ -109,14 +109,12 @@
                     <table id="orderTable" class="table table-striped table-bordered text-center table-hover">
                         <thead>
                             <tr>
-                                <th>訂單號碼 <img src="/img/icons/down.svg" alt=""></th>
-                                <!--
-                             	<th>商品內容 <img src="/img/icons/down.svg" alt=""></th>
-                                <th>數量 <img src="/img/icons/down.svg" alt=""></th>
-                                <th>金額 <img src="/img/icons/down.svg" alt=""></th>
-                                -->
-                                <th>訂單時間 <img src="/img/icons/down.svg" alt=""></th>
-                                <th>總金額 <img src="/img/icons/down.svg" alt=""></th>
+                                <th>訂單號碼</th>
+                                <th>姓名</th>
+                                <th>地址</th>
+                                <th>電話</th>
+                                <th>訂單時間</th>
+                                <th>總金額</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -127,12 +125,10 @@
                             <c:forEach items="${ orderList }" var="order">
 
                                 <tr class="list-item">
-                                    <td>${ order.orderId }</td>
-                                    <!--
-                                    <td>${ order.orderName }</td>
-                                    <td>${ order.quantity }</td>
-                                    <td>${ order.price }</td>
-                                    -->
+                                    <td>${order.orderId }</td>
+                                    <td>${order.userName}</td>
+                                    <td>${order.userAddress}</td>
+                                    <td>${order.userPhone}</td>
                                     <td><fmt:formatDate value="${ order.orderTime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
                                     <td>${ order.totalPrice }</td>
 

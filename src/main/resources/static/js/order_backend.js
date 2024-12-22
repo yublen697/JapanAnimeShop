@@ -147,8 +147,11 @@ $(document).ready(function () {
     // 傳送訂單資料
     $('.details').click(function () {
         var id = $(this).data('id');
+        var userName = $(this).data('user-name');
+        var userAddress = $(this).data('user-address');
+        var userPhone = $(this).data('user-phone');
         var totalPrice = $(this).data('total-price');
-        getOrderItems(id, totalPrice);
+        getOrderItems(id, userName, userAddress, userPhone, totalPrice);
     });
 
     function getOrderItems(id, totalPrice) {

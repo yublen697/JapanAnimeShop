@@ -15,6 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderDto {
     private Integer orderId; // 訂單編號
+    private String userName; // 訂單者姓名
+    private String userAddress; // 訂單者地址
+    private String userPhone; // 訂單者電話
     private Integer totalPrice; //總金額
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

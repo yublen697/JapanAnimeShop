@@ -79,12 +79,8 @@
                                     <img class="me-2" src="/img/paw-print.png" alt="">購物車</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/location">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">地點</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/user">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">會員</a>
+                                <a class="nav-link logout" id="nav-link" type="button">
+                                    <img class="me-2" src="/img/paw-print.png" alt="">登出</a>
                             </li>
                         </ul>
 
@@ -105,6 +101,25 @@
                 <fieldset>
                     <!-- HttpMethod 隱藏欄位 -->
                     <input name="_method" type="hidden" value="${ _method }" />
+
+                    <!-- 姓名輸入 -->
+                    <div class="input-group mb-3">
+                        <label for="userName" class="form-label">姓名:</label>
+                        <input type="text" id="userName" name="userName" class="form-control" placeholder="請輸入您的姓名">
+                    </div>
+
+                    <!-- 地址輸入 -->
+                    <div class="input-group mb-3">
+                        <label for="userAddress" class="form-label">地址:</label>
+                        <input type="text" id="userAddress" name="userAddress" class="form-control" placeholder="請輸入您的地址">
+                    </div>
+
+                    <!-- 電話輸入 -->
+                    <div class="input-group mb-3">
+                        <label for="userAddress" class="form-label">電話:</label>
+                        <input type="text" id="userPhone" name="userPhone" class="form-control" placeholder="請輸入您的電話">
+                    </div>
+
                     <table class="table w-100 cart-table">
                         <thead>
                         <tr>

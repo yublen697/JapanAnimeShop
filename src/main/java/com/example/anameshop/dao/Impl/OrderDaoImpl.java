@@ -26,7 +26,7 @@ public class OrderDaoImpl implements OrderDao {
     // 查詢所有
     @Override
     public List<Order> findAllOrder() {
-        String sql = "SELECT order_id, order_time, total_price "
+        String sql = "SELECT order_id, user_name, user_address, user_phone, order_time, total_price "
                     +"FROM orders "
                     +"ORDER BY order_id DESC";
 
@@ -48,13 +48,16 @@ public class OrderDaoImpl implements OrderDao {
     // 新增 Order
     @Override
     public int createOrder(OrderDto orderDto) {
-        String sql = "INSERT INTO orders (total_price, order_time) VALUES (?,?)";
+        String sql = "INSERT INTO orders (user_name, user_address, user_phone, total_price, order_time) VALUES (?,?,?,?,?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
 
         jdbcTemplate.update(connection ->{
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, orderDto.getTotalPrice());
-            ps.setTimestamp(2, new java.sql.Timestamp(orderDto.getOrderTime().getTime()));
+            ps.setString(1, orderDto.getUserName());
+            ps.setString(2, orderDto.getUserAddress());
+            ps.setString(3, orderDto.getUserPhone());
+            ps.setInt(4, orderDto.getTotalPrice());
+            ps.setTimestamp(5, new java.sql.Timestamp(orderDto.getOrderTime().getTime()));
             return ps;
         },keyHolder);
 
