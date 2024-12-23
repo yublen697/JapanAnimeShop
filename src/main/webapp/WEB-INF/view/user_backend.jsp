@@ -116,7 +116,6 @@
                     <table id="userTable" class="table table-striped table-hover table-bordered text-center">
                         <thead>
                             <tr class="user-row">
-                                <th>編號 <img src="/img/icons/down.svg" alt=""></th>
                                 <th>帳號 <img src="/img/icons/down.svg" alt=""></th>
                                 <th class="d-none">密碼 <img src="/img/icons/down.svg" alt=""></th>
                                 <th class="name-cell">姓名 <img src="/img/icons/down.svg" alt=""></th>
@@ -131,7 +130,6 @@
                             <!-- 迴圈開始 -->
                             <c:forEach items="${ userList }" var="user">
                                 <tr class="list-item">
-                                    <td>${ user.userId }</td>
                                     <td>${ user.account }</td>
                                     <td class="ellipsis d-none" data-bs-toggle="tooltip" data-bs-placement="top" title="example_password">${ user.password }</td>
                                     <td>${ user.name }</td>
