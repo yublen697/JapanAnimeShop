@@ -79,12 +79,8 @@
                                     <img class="me-2" src="/img/paw-print.png" alt="">購物車</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/location">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">地點</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="nav-link" href="/user">
-                                    <img class="me-2" src="/img/paw-print.png" alt="">會員</a>
+                                <a class="nav-link logout" id="nav-link" type="button">
+                                    <img class="me-2" src="/img/paw-print.png" alt="">登出</a>
                             </li>
                         </ul>
 
@@ -105,6 +101,18 @@
                 <fieldset>
                     <!-- HttpMethod 隱藏欄位 -->
                     <input name="_method" type="hidden" value="${ _method }" />
+                        <div class="OrderRegister mx-auto animate__animated animate__zoomIn">
+                            <h2> 資料填寫 </h2>
+                            <!-- 姓名輸入 -->
+                            <label for="userName">姓名</label>
+                            <input type="text" class="form-control userName" id="userName" name="userName">
+                            <!-- 地址輸入 -->
+                            <label for="userAddress">地址</label>
+                            <input type="text" class="form-control userAddress" id="userAddress" name="userAddress">
+                            <!-- 電話輸入 -->
+                            <label for="userPhone">電話</label>
+                            <input type="text" class="form-control userPhone" id="userPhone" name="userPhone">
+                        </div>
                     <table class="table w-100 cart-table">
                         <thead>
                         <tr>
