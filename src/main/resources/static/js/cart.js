@@ -196,15 +196,4 @@ $(document).ready(function () {
     });
 
     renderCart(); // 在頁面載入時渲染購物車
-
-    // 分頁相關函數
-    function getPerPage() {
-        if (window.innerWidth < 767) {
-            return 4;
-        } else if (window.innerWidth < 992) {
-            return 6;
-        } else {
-            return 9;
-        }
-    }
 });
