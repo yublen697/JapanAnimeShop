@@ -21,7 +21,7 @@ $(document).ready(function () {
         Swal.fire({
             icon: 'warning',
             title: '非管理員身分',
-            text: '非管理員身分，將自動跳轉到頁面。',
+            text: '非管理員身分，將自動跳轉到首面。',
             confirmButtonText: '確定'
         }).then(() => {
             // 跳轉到首面
