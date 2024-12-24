@@ -25,7 +25,7 @@ $(document).ready(function () {
             text: '非管理員身分，將自動跳轉到頁面。',
             confirmButtonText: '確定'
         }).then(() => {
-            // 跳轉到登入頁面
+            // 跳轉到首面
             window.location.href = '/index'; // 替換成你的首面路徑
         });
         return; // 阻止後續功能執行
