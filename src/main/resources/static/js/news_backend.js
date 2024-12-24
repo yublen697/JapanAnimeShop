@@ -16,6 +16,21 @@ $(document).ready(function () {
 
         return; // 阻止後續功能執行
     }
+    // 檢查管理員身分
+    var isUser = localStorage.getItem('isUser'); // 從 localStorage 中取得 isUser 資料
+    if (isUser !== '1'){
+        // 顯示提示訊息
+        Swal.fire({
+            icon: 'warning',
+            title: '非管理員身分',
+            text: '非管理員身分，將自動跳轉到頁面。',
+            confirmButtonText: '確定'
+        }).then(() => {
+            // 跳轉到登入頁面
+            window.location.href = '/index'; // 替換成你的首面路徑
+        });
+        return; // 阻止後續功能執行
+    }
     $('#sec2 .item').each(function (index) {
         if ((index + 1) % 2 === 0) {  // 偶數卡片
             $(this).find('.col-md-6').eq(0).addClass('order-md-2');
