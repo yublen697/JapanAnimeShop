@@ -12,8 +12,6 @@
 }
 
 .OrderRegister {
-    min-width: 300px;
-    max-width: 370px;
     padding: 30px 20px;
     margin: 0px 10px;
     background-color: var(--c-base-07);
