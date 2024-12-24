@@ -14,13 +14,6 @@ $(document).ready(function () {
 
         return; // 阻止後續功能執行
     }
-    // 初始化頁面加載時顯示分頁
-    initializePagination('appetizer');
-
-    // 當視窗大小改變時重新初始化分頁
-    $(window).resize(function () {
-        initializePagination();
-    });
 
     // 定義全局變數，初始值為 localStorage 中的值或 null
     let orderData = JSON.parse(localStorage.getItem('orderData')) || {
@@ -213,32 +206,5 @@ $(document).ready(function () {
         } else {
             return 9;
         }
-    }
-
-    function initializePagination() {
-        var perPage = getPerPage();
-        // 總共有多少個項目
-        var numItems = $(".list-item").length;
-        // 初始化時先顯示前幾個項目
-        $(".list-item").hide().slice(0, perPage).show();
-
-        // 如果頁面已經有分頁控制元件，先移除
-        if ($(".pagination-container").length) {
-            $(".pagination-container").remove();
-        }
-
-        // 添加新的分頁控制元件
-        $("#pagination-container").pagination({
-            items: numItems,
-            itemsOnPage: perPage,
-            cssStyle: "light-theme",
-            prevText: "&laquo;",
-            nextText: "&raquo;",
-            onPageClick: function (pageNumber) {
-                var showFrom = perPage * (pageNumber - 1);
-                var showTo = showFrom + perPage;
-                $(".list-item").hide().slice(showFrom, showTo).show();
-            },
-        });
     }
 });
