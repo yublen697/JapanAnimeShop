@@ -19,14 +19,14 @@ public class NewsDaoImpl implements NewsDao {
     // 查詢所有
     @Override
     public List<News> findAllNews() {
-        String sql = "SELECT news_id, news_title, content, news_image, start_date, end_date, combo_name, combo_price FROM news";
+        String sql = "SELECT news_id, news_title, content, news_image, start_date, end_date FROM news";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(News.class));
     }
 
     // 根據 ID 單筆查詢，查不到會有 DataAccess 例外
     @Override
     public News findNewsById(Integer newsId) {
-            String sql = "SELECT news_id, news_title, content, news_image, start_date, end_date, combo_name, combo_price FROM news WHERE news_id = ?";
+            String sql = "SELECT news_id, news_title, content, news_image, start_date, end_date FROM news WHERE news_id = ?";
 
             try {
                 return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(News.class), newsId);
@@ -40,15 +40,15 @@ public class NewsDaoImpl implements NewsDao {
     // 新增
     @Override
     public int createNews(News news) {
-        String sql = "INSERT INTO news (news_title, content, news_image, start_date, end_date, combo_name, combo_price) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        return jdbcTemplate.update(sql, news.getNewsTitle(), news.getContent(), news.getNewsImage(), news.getStartDate(), news.getEndDate(), news.getComboName(), news.getComboPrice());
+        String sql = "INSERT INTO news (news_title, content, news_image, start_date, end_date) VALUES (?, ?, ?, ?, ?)";
+        return jdbcTemplate.update(sql, news.getNewsTitle(), news.getContent(), news.getNewsImage(), news.getStartDate(), news.getEndDate());
     }
 
     // 修改
     @Override
     public int updateNews(Integer newsId, News news) {
-        String sql = "UPDATE news SET news_title = ?, content = ?, news_image = ?, start_date = ?, end_date = ?, combo_name = ?, combo_price = ? WHERE news_id = ?";
-        return jdbcTemplate.update(sql, news.getNewsTitle(), news.getContent(), news.getNewsImage(), news.getStartDate(), news.getEndDate(), news.getComboName(), news.getComboPrice(), newsId);
+        String sql = "UPDATE news SET news_title = ?, content = ?, news_image = ?, start_date = ?, end_date = ?  WHERE news_id = ?";
+        return jdbcTemplate.update(sql, news.getNewsTitle(), news.getContent(), news.getNewsImage(), news.getStartDate(), news.getEndDate(), newsId);
     }
 
     // 刪除

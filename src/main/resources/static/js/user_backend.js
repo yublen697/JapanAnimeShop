@@ -121,7 +121,6 @@ $(document).ready(function () {
         $('#updateUserForm').attr("action", `/user_backend/${userId}`);
         // 將資料設置到 updateUserForm 表單中的對應輸入字段
         $('#updateUserForm #userId').val(userId);
-
         $('#updateUserForm #updateAccount').val(account);
         $('#updateUserForm #updatePassword').val(password);
         $('#updateUserForm #updatePassword2').val(password);
