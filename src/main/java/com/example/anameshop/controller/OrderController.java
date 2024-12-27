@@ -6,11 +6,13 @@ import com.example.anameshop.model.entity.Order;
 import com.example.anameshop.model.entity.OrderItem;
 import com.example.anameshop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class OrderController {
@@ -61,5 +63,12 @@ public class OrderController {
         Thread.sleep(1300);
         return "order_backend";
     }
-
+    // 更新訂單狀態
+    @PutMapping("/order_backend/{orderId}/status")
+    public ResponseEntity<String> updateOrderStatus(@PathVariable Long orderId, @RequestBody Map<String, String> request) {
+        String newStatus = request.get("status");
+        // 更新訂單狀態的邏輯
+        orderService.updateOrderStatus(orderId, newStatus);
+        return ResponseEntity.ok("Order status updated successfully");
+    }
 }

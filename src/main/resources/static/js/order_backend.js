@@ -38,41 +38,6 @@ $(document).ready(function () {
         });
     */
 
-    // 圖片點擊排序事件
-    $('th img').click(function () {
-        const columnIndex = $(this).closest('th').index(); // 獲取點擊的圖片所在標題的列索引
-        const rows = $('#orderTable tbody tr').get(); // 獲取所有行
-
-        // 切換排序符號
-        $('th').removeClass('sorted ascending descending');
-        if (isAscending) {
-            $(this).closest('th').addClass('sorted ascending');
-        } else {
-            $(this).closest('th').addClass('sorted descending');
-        }
-
-        // 圖片旋轉
-        $(this).css({ transform: `rotate(${isAscending ? 180 : 0}deg)`, transition: 'transform 0.2s' });
-
-        // 恢復其他三個th的圖片狀態
-        $(this).closest('tr').siblings().find('img').css({ transform: 'rotate(0deg)' });
-
-        // 排序
-        rows.sort((a, b) => {
-            const aValue = $(a).find('td').eq(columnIndex).text().toLowerCase();
-            const bValue = $(b).find('td').eq(columnIndex).text().toLowerCase();
-            return (isAscending ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue));
-        });
-
-        // 更新表格
-        $.each(rows, function (index, row) {
-            $('#orderTable tbody').append(row);
-        });
-
-        // 切換排序順序
-        isAscending = !isAscending;
-    });
-
     // 搜尋功能
     $('#searchInput').on('keyup', function () {
         const searchText = $(this).val().toLowerCase();
@@ -92,7 +57,6 @@ $(document).ready(function () {
             }
         });
     });
-
 
     // 根據視窗寬度設置每頁顯示的項目數量
     function getPerPage() {
@@ -157,8 +121,6 @@ $(document).ready(function () {
             }
         });
     });
-
-
     // 傳送訂單資料
     $('.details').click(function () {
         var id = $(this).data('id');
@@ -179,13 +141,21 @@ $(document).ready(function () {
                 // 遍歷陣列並顯示資料
                 var output = "<div class='d-flex justify-content-between'><h3>訂單編號：" + id + "</h3></div>";
                 output += "<table class='table table-striped table-bordered text-center table-hover'>";
-                output += "<thead><tr><th>商品名稱</th><th>數量</th><th>單價</th><th>總價</th></tr></thead><tbody>";
+                output += "<thead><tr><th>商品名稱</th><th>數量</th><th>單價</th><th>總價</th><th>訂單狀態</th></tr></thead><tbody>";
                 $.each(data, function (index, item) {
                     output += "<tr>";
                     output += "<td>" + item.orderName + "</td>";
                     output += "<td>" + item.quantity + "</td>";
                     output += "<td>" + item.price + "元</td>";
                     output += "<td>" + item.quantity * item.price + "元</td>";
+                    output += `<td>
+                    <select class="order-status" data-id="${id}">
+                        <option value="pending" ${item.status === 'pending' ? 'selected' : ''}>待處理</option>
+                        <option value="shipped" ${item.status === 'shipped' ? 'selected' : ''}>已出貨</option>
+                        <option value="delivered" ${item.status === 'delivered' ? 'selected' : ''}>已送達</option>
+                        <option value="cancelled" ${item.status === 'cancelled' ? 'selected' : ''}>已取消</option>
+                    </select>
+                </td>`;
                     output += "</tr>";
                 });
                 output += "</tbody></table>";
@@ -200,6 +170,36 @@ $(document).ready(function () {
             error: function (xhr, status, error) {
                 console.error(xhr.responseText);
             }
+
         });
     }
+    $(document).on('change', '.order-status', function () {
+        const orderId = $(this).data('id'); // 取得訂單 ID
+        const newStatus = $(this).val(); // 取得新的狀態
+
+        // 發送更新請求
+        $.ajax({
+            url: `/order_backend/${orderId}/status`, // 更新狀態的 API 路徑
+            type: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify({ status: newStatus }),
+            success: function () {
+                Swal.fire({
+                    title: '更新成功！',
+                    text: `訂單狀態已更新為：${newStatus}`,
+                    icon: 'success',
+                    confirmButtonText: '確定'
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+                Swal.fire({
+                    title: '更新失敗！',
+                    text: '請稍後再試。',
+                    icon: 'error',
+                    confirmButtonText: '確定'
+                });
+            }
+        });
+    });
 });

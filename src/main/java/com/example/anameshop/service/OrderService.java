@@ -75,9 +75,15 @@ public class OrderService {
         orderDao.deleteOrder(orderId);
     }
 
+    @Transactional
+    public void updateOrderStatus(Integer orderId, String status) {
+        Order order = orderDao.findOrderById(orderId);
+        if (order == null) {
+            throw new RuntimeException("找不到訂單，ID：" + orderId);
+        }
+        orderDao.updateOrderStatus(orderId, status);
+    }
 
     // 判斷要呼叫DAO語法幾次
-
-
 
 }
