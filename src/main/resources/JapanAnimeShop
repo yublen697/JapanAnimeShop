@@ -75,7 +75,7 @@ INSERT INTO user (account, password, salt, name, gender, birthday, email, phone,
 ('Soyo', 'a023be44941f7b2d8d726f71b8adb7392dd8695d48d50e59c52682f008293908', '7c1d50fdba2124c0406949789c893e6c', 'Soyo' , '女生', '2006-05-27', 'soyu114514@gmail.com', '0942115132', 2),
 ('Anon', 'fd8d4a6064c901b9608ca443c54fd87b5de59b6d23fedabe2b71427fc7d2a702', '69f19750460c122a52291c2f8e1da61c', 'Anon' , '女生', '2006-09-08', 'anon@gmail.com', '0922626350', 2),
 ('Ranna', 'c78a01d217850b631719c67ac62db4f2a207c51489a652ad87982fb05974ee80', '28aa28fef22a524b817a36eb559626d7', 'Ranna' , '女生', '2008-02-22', 'ranna@gmail.com', '0965145162', 2),
-('Anon', '2c8792547151c067f6807685363dbb5cd1319468859768448a318ff18eee0e50', 'f9ce83571f74787060fdc73e73b6e7c9', 'Taki' , '女生', '2006-08-09', 'taki145@gmail.com', '0962350421', 2),
+('Taki', '2c8792547151c067f6807685363dbb5cd1319468859768448a318ff18eee0e50', 'f9ce83571f74787060fdc73e73b6e7c9', 'Taki' , '女生', '2006-08-09', 'taki145@gmail.com', '0962350421', 2),
 ('Iiyokonyo','fb1f55aa02312e56967cea7765da5f8ea15536ed23bfccd8b3f6589b930cff78', '3ced75c19cbde75bf70f6ad8f8bfe0c3','田所浩二','男生', '1988-11-21', 'kevin114514@gmail.com', '0962626350',2);
 
 INSERT INTO product (product_name, product_type, description, product_price, product_image) VALUES

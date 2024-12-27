@@ -138,7 +138,6 @@ public class ProductController {
         model.addAttribute("productType", product.getProductType());
 
         System.out.println("新增成功，ID為：" + product.getProductId());
-        model.addAttribute("_method", "PUT");
         return "product_backend";
     }
 

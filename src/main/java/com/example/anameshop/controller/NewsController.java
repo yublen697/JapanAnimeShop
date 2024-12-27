@@ -79,7 +79,6 @@ public class NewsController {
         model.addAttribute("imgurl", "img/news");
 
         System.out.println("新增成功，ID為：" + news.getNewsId());
-        model.addAttribute("_method", "PUT");
         return "news_backend";
     }
 

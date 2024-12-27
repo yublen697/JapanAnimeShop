@@ -243,7 +243,7 @@
       </div>
       <div class="col-12 d-flex align-items-center">
         <img src="/img/Logo/Logo.gif" class="img-fluid me-3" alt="...">
-        <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Tomorin</p>
+        <p class="mb-0">Copyright &copy; 2024. All rights reserved. Designed by Okita</p>
       </div>
     </div>
   </div>
