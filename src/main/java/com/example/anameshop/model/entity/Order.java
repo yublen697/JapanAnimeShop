@@ -22,5 +22,5 @@ public class Order {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date orderTime;
     private Integer totalPrice;
-    private Integer status;
+    private String status;
 }

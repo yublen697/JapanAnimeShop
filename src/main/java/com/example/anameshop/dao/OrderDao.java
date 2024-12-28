@@ -12,5 +12,4 @@ public interface OrderDao {
     int createOrder(OrderDto orderDto); // 新增 Order
     void createOrderItem(Integer orderId, OrderItemDto orderItemDto); // 新增 Order 明細
     int deleteOrder(Integer orderId); // 刪除
-    void updateOrderStatus(Integer orderId, String status); // 更新訂單狀態
 }

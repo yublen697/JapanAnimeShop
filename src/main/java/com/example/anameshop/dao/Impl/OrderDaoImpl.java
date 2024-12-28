@@ -84,11 +84,4 @@ public class OrderDaoImpl implements OrderDao {
         return jdbcTemplate.update(deleteOrderSql, orderId);
     }
 
-    @Transactional
-    @Override
-    public void updateOrderStatus(Integer orderId, String status) {
-        String updateOrderStatusSql = "UPDATE orders SET status = ? WHERE order_id = ?";
-        jdbcTemplate.update(updateOrderStatusSql, status, orderId);
-    }
-
 }

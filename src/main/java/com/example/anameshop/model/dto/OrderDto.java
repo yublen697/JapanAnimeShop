@@ -25,5 +25,4 @@ public class OrderDto {
 
     private List<OrderItemDto> items; // 訂單明細
 
-    private String status; // 訂單狀態
 }

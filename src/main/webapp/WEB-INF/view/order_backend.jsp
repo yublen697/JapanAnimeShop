@@ -114,7 +114,6 @@
                                 <th>電話</th>
                                 <th>訂單時間</th>
                                 <th>總金額</th>
-                                <th>訂單狀態</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -130,15 +129,6 @@
                                     <td>${order.userPhone}</td>
                                     <td><fmt:formatDate value="${ order.orderTime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
                                     <td>${ order.totalPrice }</td>
-                                    <!-- 訂單狀態 -->
-                                    <td>
-                                        <select class="order-status" data-id="${order.orderId}">
-                                            <option value="pending" ${order.status == 'pending' ? 'selected' : ''}>待處理</option>
-                                            <option value="shipped" ${order.status == 'shipped' ? 'selected' : ''}>已出貨</option>
-                                            <option value="delivered" ${order.status == 'delivered' ? 'selected' : ''}>已送達</option>
-                                            <option value="cancelled" ${order.status == 'cancelled' ? 'selected' : ''}>已取消</option>
-                                        </select>
-                                    </td>
                                     <!-- 操作按鈕 -->
                                     <td>
                                         <form action="${ pageContext.request.contextPath }/order_backend/${ order.orderId }" id="delete-form" method="POST">

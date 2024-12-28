@@ -141,7 +141,7 @@ $(document).ready(function () {
                 // 遍歷陣列並顯示資料
                 var output = "<div class='d-flex justify-content-between'><h3>訂單編號：" + id + "</h3></div>";
                 output += "<table class='table table-striped table-bordered text-center table-hover'>";
-                output += "<thead><tr><th>商品名稱</th><th>數量</th><th>單價</th><th>總價</th><th>訂單狀態</th></tr></thead><tbody>";
+                output += "<thead><tr><th>商品名稱</th><th>數量</th><th>單價</th><th>總價</th></tr></thead><tbody>";
                 $.each(data, function (index, item) {
                     output += "<tr>";
                     output += "<td>" + item.orderName + "</td>";
@@ -149,12 +149,6 @@ $(document).ready(function () {
                     output += "<td>" + item.price + "元</td>";
                     output += "<td>" + item.quantity * item.price + "元</td>";
                     output += `<td>
-                    <select class="order-status" data-id="${id}">
-                        <option value="pending" ${item.status === 'pending' ? 'selected' : ''}>待處理</option>
-                        <option value="shipped" ${item.status === 'shipped' ? 'selected' : ''}>已出貨</option>
-                        <option value="delivered" ${item.status === 'delivered' ? 'selected' : ''}>已送達</option>
-                        <option value="cancelled" ${item.status === 'cancelled' ? 'selected' : ''}>已取消</option>
-                    </select>
                 </td>`;
                     output += "</tr>";
                 });
@@ -173,33 +167,4 @@ $(document).ready(function () {
 
         });
     }
-    $(document).on('change', '.order-status', function () {
-        const orderId = $(this).data('id'); // 取得訂單 ID
-        const newStatus = $(this).val(); // 取得新的狀態
-
-        // 發送更新請求
-        $.ajax({
-            url: `/order_backend/${orderId}/status`, // 更新狀態的 API 路徑
-            type: "PUT",
-            contentType: "application/json",
-            data: JSON.stringify({ status: newStatus }),
-            success: function () {
-                Swal.fire({
-                    title: '更新成功！',
-                    text: `訂單狀態已更新為：${newStatus}`,
-                    icon: 'success',
-                    confirmButtonText: '確定'
-                });
-            },
-            error: function (xhr, status, error) {
-                console.error(xhr.responseText);
-                Swal.fire({
-                    title: '更新失敗！',
-                    text: '請稍後再試。',
-                    icon: 'error',
-                    confirmButtonText: '確定'
-                });
-            }
-        });
-    });
 });

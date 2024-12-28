@@ -63,12 +63,4 @@ public class OrderController {
         Thread.sleep(1300);
         return "order_backend";
     }
-    // 更新訂單狀態
-    @PutMapping("/order_backend/{orderId}/status")
-    public ResponseEntity<String> updateOrderStatus(@PathVariable Long orderId, @RequestBody Map<String, String> request) {
-        String newStatus = request.get("status");
-        // 更新訂單狀態的邏輯
-        orderService.updateOrderStatus(orderId, newStatus);
-        return ResponseEntity.ok("Order status updated successfully");
-    }
 }
