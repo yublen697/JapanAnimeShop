@@ -69,7 +69,7 @@ public class ForgetController {
                 "驗證碼應於5分鐘內（" + expiryDateStr + "前）完成輸入，逾時請重新申請。\n\n" +
                 "如非本人操作，請忽略此郵件。\n\n" +
                 "祝您使用愉快！\n\n" +
-                "MyGo 團隊。\n\n";
+                "東方購物鄉 團隊。\n\n";
         message.setText(emailContent);
         mailSender.send(message);
 

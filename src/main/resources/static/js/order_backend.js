@@ -160,11 +160,7 @@ $(document).ready(function () {
 				               </div>`;
 
                 $(".modal-body").html(output);
-            },
-            error: function (xhr, status, error) {
-                console.error(xhr.responseText);
             }
-
         });
     }
 });

@@ -102,7 +102,7 @@
                     <!-- HttpMethod 隱藏欄位 -->
                     <input name="_method" type="hidden" value="${ _method }" />
                         <div class="OrderRegister mx-auto animate__animated animate__zoomIn">
-                            <h2> 資料填寫 </h2>
+                            <h2> 收件人資料填寫 </h2>
                             <!-- 姓名輸入 -->
                             <label for="userName">姓名</label>
                             <input type="text" class="form-control userName" id="userName" name="userName">
